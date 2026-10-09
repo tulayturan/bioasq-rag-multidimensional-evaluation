@@ -1,0 +1,4 @@
+split_a,split_b,docs_a,docs_b,overlap_n,jaccard
+train,validation,41730,8934,684,0.01368547418967587
+train,internal_test_LOCKED,41730,9053,588,0.011714314174718597
+validation,internal_test_LOCKED,8934,9053,182,0.010221847795563043
