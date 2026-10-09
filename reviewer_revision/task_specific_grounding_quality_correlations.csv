@@ -1,0 +1,9 @@
+split,task,n,grounding_metric,task_metric,spearman_rho,p_value
+Validation,yesno,232,mean_top1_entailment,correctness,0.09745694170246699,0.13889269059855144
+Validation,factoid,255,mean_top1_entailment,MRR,0.06633968064121026,0.291279898459791
+Validation,list,170,mean_top1_entailment,F1,-0.0015461336850217074,0.9840350797267386
+Validation,summary,205,mean_top1_entailment,ROUGE-L,0.18326164355392408,0.008534071180818207
+Locked test,yesno,231,mean_top1_entailment,correctness,0.1516956458754119,0.021086581146658435
+Locked test,factoid,254,mean_top1_entailment,MRR,-0.004494616031537406,0.9431753665447777
+Locked test,list,170,mean_top1_entailment,F1,0.222727536636475,0.003507644007633588
+Locked test,summary,205,mean_top1_entailment,ROUGE-L,0.20307644305080313,0.0034966727632097377
