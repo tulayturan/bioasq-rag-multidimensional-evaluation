@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+torch
+transformers
+accelerate
+bitsandbytes
+tqdm
+rouge-score
+matplotlib
+rank-bm25
+sentencepiece
