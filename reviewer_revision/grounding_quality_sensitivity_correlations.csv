@@ -1,0 +1,33 @@
+split,task,n,task_metric,grounding_metric,spearman_rho,p_value,holm_p_within_split,holm_significant_within_split
+Validation,yesno,232,Correctness,mean_top1_entailment,0.09745694170246699,0.13889269059855144,1.0,False
+Validation,yesno,232,Correctness,top1_supported_claim_rate,0.0996946219281199,0.13000663542448596,1.0,False
+Validation,yesno,232,Correctness,mean_top3_max_entailment,0.058932800082287476,0.3715540683253148,1.0,False
+Validation,yesno,232,Correctness,top3_supported_claim_rate,0.05504706077604271,0.4039676963848736,1.0,False
+Validation,factoid,255,MRR,mean_top1_entailment,0.06633968064121026,0.291279898459791,1.0,False
+Validation,factoid,255,MRR,top1_supported_claim_rate,0.10524699342572713,0.09353009724506164,1.0,False
+Validation,factoid,255,MRR,mean_top3_max_entailment,-0.01031783257037683,0.8697646401764694,1.0,False
+Validation,factoid,255,MRR,top3_supported_claim_rate,0.06980510010330719,0.2667505766021838,1.0,False
+Validation,list,170,F1,mean_top1_entailment,-0.0015461336850217074,0.9840350797267386,1.0,False
+Validation,list,170,F1,top1_supported_claim_rate,0.059891171956103335,0.4378548099295281,1.0,False
+Validation,list,170,F1,mean_top3_max_entailment,0.0761329525380399,0.32375956637676107,1.0,False
+Validation,list,170,F1,top3_supported_claim_rate,0.04484023168811056,0.5614940442038578,1.0,False
+Validation,summary,205,ROUGE-L,mean_top1_entailment,0.18326164355392408,0.008534071180818207,0.1280110677122731,False
+Validation,summary,205,ROUGE-L,top1_supported_claim_rate,0.11232134236501495,0.10883726564016255,1.0,False
+Validation,summary,205,ROUGE-L,mean_top3_max_entailment,0.224592148298425,0.0012059571862100304,0.019295314979360486,True
+Validation,summary,205,ROUGE-L,top3_supported_claim_rate,0.1692461552732473,0.015268556819187415,0.2137597954686238,False
+Locked test,yesno,231,Correctness,mean_top1_entailment,0.1516956458754119,0.021086581146658435,0.2319523926132428,False
+Locked test,yesno,231,Correctness,top1_supported_claim_rate,0.1928218449096021,0.0032567603370574055,0.04885140505586108,True
+Locked test,yesno,231,Correctness,mean_top3_max_entailment,0.13822734086778188,0.03576703221428546,0.3576703221428546,False
+Locked test,yesno,231,Correctness,top3_supported_claim_rate,0.024466872568129093,0.7114552333907438,1.0,False
+Locked test,factoid,254,MRR,mean_top1_entailment,-0.004494616031537406,0.9431753665447777,1.0,False
+Locked test,factoid,254,MRR,top1_supported_claim_rate,-0.027965453205445103,0.6573430946673084,1.0,False
+Locked test,factoid,254,MRR,mean_top3_max_entailment,-0.0003810244595496167,0.9951787493109376,1.0,False
+Locked test,factoid,254,MRR,top3_supported_claim_rate,-0.016236312441135624,0.7967890510764812,1.0,False
+Locked test,list,170,F1,mean_top1_entailment,0.222727536636475,0.003507644007633588,0.04895341868493633,True
+Locked test,list,170,F1,top1_supported_claim_rate,0.07309157643891359,0.34351949835475004,1.0,False
+Locked test,list,170,F1,mean_top3_max_entailment,0.17941567074267217,0.019228867088324133,0.23074640505988958,False
+Locked test,list,170,F1,top3_supported_claim_rate,-0.02263930486754213,0.769491452116788,1.0,False
+Locked test,summary,205,ROUGE-L,mean_top1_entailment,0.20307644305080313,0.0034966727632097377,0.04895341868493633,True
+Locked test,summary,205,ROUGE-L,top1_supported_claim_rate,0.10797913174665923,0.12329692548033605,1.0,False
+Locked test,summary,205,ROUGE-L,mean_top3_max_entailment,0.21065820503396745,0.0024308486728761083,0.03889357876601773,True
+Locked test,summary,205,ROUGE-L,top3_supported_claim_rate,-0.030336566492516787,0.6658889737244851,1.0,False
