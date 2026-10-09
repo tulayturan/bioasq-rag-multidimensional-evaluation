@@ -1,0 +1,11 @@
+{
+  "n_total_questions": 5729,
+  "train_n": 4007,
+  "validation_n": 862,
+  "internal_test_n": 860,
+  "duplicate_safe_groups": 5713,
+  "cross_split_duplicate_groups": 0,
+  "first_split_stratified": true,
+  "second_split_stratified": true,
+  "seed": 42
+}
