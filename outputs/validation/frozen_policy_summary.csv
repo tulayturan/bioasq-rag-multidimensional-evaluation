@@ -1,0 +1,3 @@
+policy,n_total,n_answered,n_abstained,overall_question_coverage,overall_abstention_rate,full_macro_task_score,selective_macro_task_score,macro_task_score_gain
+conservative_summary80,862,821,41,0.9524361948955916,0.047563805104408385,0.5175508071368172,0.519638154200512,0.0020873470636947333
+expanded_summary_factoid80,862,770,92,0.8932714617169374,0.10672853828306261,0.5175508071368172,0.5286986117168518,0.011147804580034615
