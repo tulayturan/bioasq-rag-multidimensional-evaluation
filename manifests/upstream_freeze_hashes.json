@@ -1,0 +1,7 @@
+{
+  "results/phase3C_reranking/frozen_retrieval_pipeline.json": "9f21dbfa1367ce661beef94d121fd82ebd08c187646f590d65cbb00a130faa4f",
+  "results/phase4B_evidence_filtering/frozen_evidence_strategy.json": "0bc1e99f6160c645c56eba1f318722c2e27b59e6d68a84735191354dac728e53",
+  "results/phase4C_grounding_v2/frozen_grounding_method_v2.json": "4b60d4f341c8e7fddc8f5e5c350f7b197b3c7da939db1abbc44a9a3f696f1221",
+  "results/phase4D_v2_task_specific_confidence/frozen_confidence_method_v2.json": "6e76f1059f1c0626a9b4cd67680ebabe67247c3bf368da8bdcf1871d9da7f6cc",
+  "results/phase4E_task_specific_selective_answering/frozen_selective_answering_policy.json": "f7f6d0f131dfffabfb3cc873ec3c5981a196125a5e624b15865ed1bf0049cb2e"
+}

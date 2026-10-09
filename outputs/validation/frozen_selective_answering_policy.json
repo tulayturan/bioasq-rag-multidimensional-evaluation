@@ -1,0 +1,81 @@
+{
+  "dataset": "BioASQ14b",
+  "validation_questions": 862,
+  "internal_test_evaluated": false,
+  "confidence_source": "Phase 4D v2 task-specific OOF confidence",
+  "ranking_signal": "task_ridge_raw",
+  "reported_confidence": "task_ridge_isotonic",
+  "risk_definition": "1 - per-question BioASQ task score",
+  "coverage_selection": {
+    "primary_task_coverage": 0.8,
+    "sensitivity_coverages": [
+      0.9,
+      0.8,
+      0.7,
+      0.6,
+      0.5
+    ],
+    "best_coverage_selected_post_hoc": false
+  },
+  "eligibility_rule": {
+    "multiple_testing": "Holm correction over four task-level raw-Ridge Spearman tests",
+    "primary": "positive Holm-significant Spearman AND paired-bootstrap MSE improvement over train-mean baseline",
+    "secondary": "positive Holm-significant Spearman AND paired-bootstrap MAE improvement, without MSE improvement, over train-mean baseline",
+    "ineligible": "otherwise"
+  },
+  "task_eligibility": {
+    "yesno": "INELIGIBLE",
+    "factoid": "SECONDARY_ELIGIBLE",
+    "list": "INELIGIBLE",
+    "summary": "PRIMARY_ELIGIBLE"
+  },
+  "primary_policy": {
+    "name": "conservative_summary80",
+    "description": "Apply 80% selective coverage only to PRIMARY-ELIGIBLE summary questions; answer all factoid, yes/no, and list questions.",
+    "task_coverages": {
+      "summary": 0.8,
+      "factoid": 1.0,
+      "yesno": 1.0,
+      "list": 1.0
+    }
+  },
+  "secondary_policy": {
+    "name": "expanded_summary_factoid80",
+    "description": "Apply 80% selective coverage to summary and SECONDARY-ELIGIBLE factoid questions; answer all yes/no and list questions.",
+    "task_coverages": {
+      "summary": 0.8,
+      "factoid": 0.8,
+      "yesno": 1.0,
+      "list": 1.0
+    }
+  },
+  "negative_control_tasks": [
+    "yesno",
+    "list"
+  ],
+  "locked_test_application": "Rank locked-test questions within each task using the frozen final task-specific raw Ridge score. Apply the prespecified coverage fractions. Do not use locked-test labels for ranking, coverage selection, or threshold tuning.",
+  "policy_a_validation_summary": {
+    "policy": "conservative_summary80",
+    "n_total": 862,
+    "n_answered": 821,
+    "n_abstained": 41,
+    "overall_question_coverage": 0.9524361948955916,
+    "overall_abstention_rate": 0.047563805104408385,
+    "full_macro_task_score": 0.5175508071368172,
+    "selective_macro_task_score": 0.519638154200512,
+    "macro_task_score_gain": 0.0020873470636947333
+  },
+  "policy_b_validation_summary": {
+    "policy": "expanded_summary_factoid80",
+    "n_total": 862,
+    "n_answered": 770,
+    "n_abstained": 92,
+    "overall_question_coverage": 0.8932714617169374,
+    "overall_abstention_rate": 0.10672853828306261,
+    "full_macro_task_score": 0.5175508071368172,
+    "selective_macro_task_score": 0.5286986117168518,
+    "macro_task_score_gain": 0.011147804580034615
+  },
+  "internal_test_unlock_allowed": false,
+  "next_phase": "Phase 5 — one-time locked internal test evaluation"
+}

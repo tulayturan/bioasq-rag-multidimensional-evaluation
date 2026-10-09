@@ -1,0 +1,104 @@
+{
+  "dataset": "BioASQ14b",
+  "validation_questions": 862,
+  "internal_test_evaluated": false,
+  "frozen_evidence_strategy": "document_top5",
+  "design": "task-specific confidence estimation",
+  "reason_for_v2": "Pooled expected-score confidence was confounded by heterogeneous task-score scales across yes/no, factoid, list, and summary.",
+  "question_type_used_as_feature": false,
+  "tasks": {
+    "yesno": {
+      "n": 232,
+      "target": "yesno_correct",
+      "interpretation": "expected correctness"
+    },
+    "factoid": {
+      "n": 255,
+      "target": "factoid_mrr",
+      "interpretation": "expected MRR"
+    },
+    "list": {
+      "n": 170,
+      "target": "list_f1",
+      "interpretation": "expected F1"
+    },
+    "summary": {
+      "n": 205,
+      "target": "rougeL_f",
+      "interpretation": "expected ROUGE-L"
+    }
+  },
+  "features": [
+    "question_words",
+    "ideal_answer_words",
+    "parse_valid",
+    "n_claims",
+    "mean_top1_entailment",
+    "mean_top1_contradiction",
+    "top1_supported_claim_rate",
+    "top1_contradiction_rate",
+    "mean_top3_max_entailment",
+    "top3_supported_claim_rate",
+    "fully_top1_supported",
+    "fully_top3_supported",
+    "mean_top1_medcpt_score",
+    "min_top1_medcpt_score",
+    "mean_top1_document_rank",
+    "rank1_document_fraction",
+    "min_top1_entailment_claim",
+    "max_top1_contradiction_claim"
+  ],
+  "base_model": {
+    "type": "Ridge",
+    "alpha": 1.0
+  },
+  "validation_protocol": {
+    "outer_folds": 10,
+    "inner_folds": 5,
+    "yesno_splitter": "StratifiedKFold on binary target",
+    "other_task_splitter": "shuffled KFold",
+    "isotonic_training": "inner OOF predictions within each outer fold"
+  },
+  "frozen_operational_outputs": {
+    "ranking_signal": "task-specific raw Ridge score",
+    "reported_confidence": "task-specific isotonic-calibrated expected task score",
+    "isotonic_plateau_tie_break": "raw Ridge score"
+  },
+  "baselines": [
+    "outer-training-fold mean target",
+    "mean_top1_entailment",
+    "top1_supported_claim_rate"
+  ],
+  "final_model_manifest": {
+    "yesno": {
+      "n_validation": 232,
+      "ridge_model": "<PROJECT_ROOT>/results/phase4D_v2_task_specific_confidence/models/yesno_ridge_confidence_model.joblib",
+      "isotonic_calibrator": "<PROJECT_ROOT>/results/phase4D_v2_task_specific_confidence/models/yesno_isotonic_calibrator.joblib",
+      "ranking_score": "raw Ridge prediction",
+      "reported_confidence": "isotonic-calibrated expected task score"
+    },
+    "factoid": {
+      "n_validation": 255,
+      "ridge_model": "<PROJECT_ROOT>/results/phase4D_v2_task_specific_confidence/models/factoid_ridge_confidence_model.joblib",
+      "isotonic_calibrator": "<PROJECT_ROOT>/results/phase4D_v2_task_specific_confidence/models/factoid_isotonic_calibrator.joblib",
+      "ranking_score": "raw Ridge prediction",
+      "reported_confidence": "isotonic-calibrated expected task score"
+    },
+    "list": {
+      "n_validation": 170,
+      "ridge_model": "<PROJECT_ROOT>/results/phase4D_v2_task_specific_confidence/models/list_ridge_confidence_model.joblib",
+      "isotonic_calibrator": "<PROJECT_ROOT>/results/phase4D_v2_task_specific_confidence/models/list_isotonic_calibrator.joblib",
+      "ranking_score": "raw Ridge prediction",
+      "reported_confidence": "isotonic-calibrated expected task score"
+    },
+    "summary": {
+      "n_validation": 205,
+      "ridge_model": "<PROJECT_ROOT>/results/phase4D_v2_task_specific_confidence/models/summary_ridge_confidence_model.joblib",
+      "isotonic_calibrator": "<PROJECT_ROOT>/results/phase4D_v2_task_specific_confidence/models/summary_isotonic_calibrator.joblib",
+      "ranking_score": "raw Ridge prediction",
+      "reported_confidence": "isotonic-calibrated expected task score"
+    }
+  },
+  "abstention_threshold_selected": false,
+  "next_phase": "Phase 4E — task-specific selective answering / abstention"
+}

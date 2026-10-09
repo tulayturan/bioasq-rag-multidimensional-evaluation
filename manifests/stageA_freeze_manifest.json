@@ -1,0 +1,53 @@
+{
+  "dataset": "BioASQ14b",
+  "n_locked_test": 860,
+  "stage": "A_label_blind_complete",
+  "timestamp_utc": "2026-08-13T13:36:34.341311+00:00",
+  "gold_scoring_performed": true,
+  "ranking_signal": "task_ridge_raw",
+  "reported_confidence": "task_ridge_isotonic",
+  "primary_policy": {
+    "name": "conservative_summary80",
+    "task_coverages": {
+      "summary": 0.8,
+      "factoid": 1.0,
+      "yesno": 1.0,
+      "list": 1.0
+    }
+  },
+  "secondary_policy": {
+    "name": "expanded_summary_factoid80",
+    "task_coverages": {
+      "summary": 0.8,
+      "factoid": 0.8,
+      "yesno": 1.0,
+      "list": 1.0
+    }
+  },
+  "locked_split_sha256": "b98932781c7d9d4961a72e741977f90f3157aa769a75ab1448688eb57559fd18",
+  "upstream_freeze_hashes": {
+    "results/phase3C_reranking/frozen_retrieval_pipeline.json": "9f21dbfa1367ce661beef94d121fd82ebd08c187646f590d65cbb00a130faa4f",
+    "results/phase4B_evidence_filtering/frozen_evidence_strategy.json": "0bc1e99f6160c645c56eba1f318722c2e27b59e6d68a84735191354dac728e53",
+    "results/phase4C_grounding_v2/frozen_grounding_method_v2.json": "4b60d4f341c8e7fddc8f5e5c350f7b197b3c7da939db1abbc44a9a3f696f1221",
+    "results/phase4D_v2_task_specific_confidence/frozen_confidence_method_v2.json": "6e76f1059f1c0626a9b4cd67680ebabe67247c3bf368da8bdcf1871d9da7f6cc",
+    "results/phase4E_task_specific_selective_answering/frozen_selective_answering_policy.json": "f7f6d0f131dfffabfb3cc873ec3c5981a196125a5e624b15865ed1bf0049cb2e"
+  },
+  "stageA_artifact_hashes": {
+    "stageA_label_blind/locked_test_sanitized_questions.csv": "4c831bce6e6d67014204d6be2e11c3616997bd487a3abc4f8b01c3b102e5b876",
+    "stageA_label_blind/bm25_top100_locked.jsonl": "9c52e05feebaabda7c2aea8d9e8c4ac68f10d47151bf41dd75d5055310dedec6",
+    "stageA_label_blind/medcpt_top100_locked.jsonl": "e303a19b0ee6ee4c7297dc595b0925b998af867e770f7a06fed4116e5c4df553",
+    "stageA_label_blind/BM25_MedCPT_RRF_top100_locked.jsonl": "29fa8b21e5c52317a3610fdc785c9820887b9374a00cdefe830192f31222a4ad",
+    "stageA_label_blind/RRF_MedCPT_CrossEncoder_top100_locked.jsonl": "b0bd0551bcf7ac3a1fc134b6d4db19d4e407d8fa25154d3efbbe0c41345c2c2d",
+    "stageA_label_blind/internal_test_860_document_top5.jsonl": "3733fdc04511b2398a0a89e2425f9f31624a3f26271a174ab706e131eea55951",
+    "stageA_label_blind/grounding_evidence_units.csv": "18e2af06a3f3b89d1f059d6bf545a0658f5552e7fde89959882b86d5210f0ead",
+    "stageA_label_blind/generated_answer_claims.csv": "d4b829817bb283294c2871d2f92a23d0b2a1a1bf79a008ba634545cdd22e3835",
+    "stageA_label_blind/selected_medcpt_top3_per_claim.csv": "e0a22065f44cb25df3e48c5dcf818e6e0d2c5ba7726d9581f1b23be6195ade3d",
+    "stageA_label_blind/top3_claim_evidence_nli.csv": "d28ef9b00eea252afb3e520db666f0d8257180bc94b0b69900224ffd40049bfe",
+    "stageA_label_blind/claim_grounding_v2.csv": "a070eaf09e907b330fd4d4ea17973ddcf42fb79b319b95d1363de4766538b8e0",
+    "stageA_label_blind/question_grounding_v2.csv": "41519e6c7a78bb2f5f989adb90d54f4e344ca0855f091b49115cd44b7143cd30",
+    "stageA_label_blind/locked_test_confidence_features.csv": "49e8212ac0b95defbf8c9096ebf40f60afcd360ea3073e8102c0f6d1cc72b40a",
+    "stageA_label_blind/locked_test_frozen_confidence_predictions.csv": "c40e8d22bf7d04e2c721b952268790d1146380d62033a52c09b1fdddd697c1d4",
+    "stageA_label_blind/frozen_policy_selection_masks.csv": "feb544eb155126b0974b333a86ffa241e17cb1026d2936d6f932f092239062c3"
+  },
+  "gold_scoring_completed_utc": "2026-08-13T13:47:21.919417+00:00"
+}
