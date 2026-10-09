@@ -45,6 +45,10 @@ grounding scores, confidence estimates, and analysis artifacts are provided.
 
 See `data/README.md` for further details.
 
+For the public validation-generation export, free-text predicted answers were omitted. The file `outputs/validation/validation_generation_predictions.csv` therefore contains per-question generation metadata and parsing status only. Full answer-level scoring remains available in the corresponding per-question score files, while locked-test generated answers are retained in the public locked-test export.
+
+Because this validation metadata file was sanitized after package assembly, its original package checksum is intentionally omitted from `checksums.txt`.
+
 ## Google Colab path convention
 
 The notebooks were developed in Google Colab and assume the following project root:
